@@ -70,16 +70,10 @@ func main() {
 func createData() [5]int {
 	rand.Seed(time.Now().UnixNano())
 	// 접근로 시퀀스 범위 설정
-	num := rand.Intn(100)
-	// 속도 범위 (속도 20미만은 탐지되지 않음)
-	// if speedNum := rand.Intn(81); speedNum < 20 {
-	// 	speedNum += 20
-	// 	println("속도 : ", speedNum)
-	// } else {
-	// 	println("속도 : ", speedNum)
-	// }
+	num := rand.Intn(101)
 
-	speedNum := rand.Intn(81)
+
+	speedNum := rand.Intn(61)
 
 	// 감지된 차선
 	detectiline := rand.Intn(5)
