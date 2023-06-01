@@ -7,7 +7,12 @@ import (
 )
 
 func main() {
-	client, err := net.Dial("tcp", "127.0.0.1:8000") // TCP 프로토콜, 127.0.0.1:8000 서버에 연결
+	k := "127.0.0.1"
+	j := "8000"
+
+	b := fmt.Sprintf("%s:%s", k, j)
+
+	client, err := net.Dial("tcp", b) // TCP 프로토콜, 127.0.0.1:8000 서버에 연결
 	if err != nil {
 		fmt.Println(err)
 		return
